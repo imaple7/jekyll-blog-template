@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+/* Prevent the changes to the background if user customize the bk color，user can customize font */
 html {
   color: #333;
   background: #fff;
@@ -9,30 +9,30 @@ html {
   text-rendering: optimizelegibility;
 }
 
-/* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
+/* If your project only supports IE9+ | Chrome | Firefox etc.，you should add .borderbox class to <html> */
 html.borderbox *, html.borderbox *:before, html.borderbox *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* 内外边距通常让各个浏览器样式的表现位置不同 */
+/* margin and padding make the page look different in different browser */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   margin: 0;
   padding: 0;
 }
 
-/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+/* Reset HTML5 tag, IE need createElement(TAG) in js */
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
 
-/* HTML5 媒体文件跟 img 保持一致 */
+/* HTML5 media file should be the same as img */
 audio, canvas, video {
   display: inline-block;
 }
 
-/* 要注意表单元素并不继承父级 font 的问题 */
+/* Table element cannot inherit font from their parents */
 body, button, input, select, textarea {
   font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
@@ -43,18 +43,18 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-/* 去掉各Table cell 的边距并让其边重合 */
+/* Remove the border of Table cell and let them overlap */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* 去除默认边框 */
+/* Remove default borders */
 fieldset, img {
   border: 0;
 }
 
-/* 块/段落引用 */
+/* Block/paragraph quote */
 blockquote {
   position: relative;
   color: #999;
@@ -71,18 +71,18 @@ blockquote {
   }
 }
 
-/* Firefox 以外，元素没有下划线，需添加 */
+/* Elements don't have underscore except Firefox */
 acronym, abbr {
   border-bottom: 1px dotted;
   font-variant: normal;
 }
 
-/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+/* Add question cursor icon */
 abbr {
   cursor: help;
 }
 
-/* 一致的 del 样式 */
+/* Set the same style of del */
 del {
   text-decoration: line-through;
 }
@@ -92,12 +92,12 @@ address, caption, cite, code, dfn, em, th, var {
   font-weight: 400;
 }
 
-/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+/* Remove the icon before each list elements */
 ul, ol {
   list-style: none;
 }
 
-/* 对齐是排版最重要的因素, 别让什么都居中 */
+/* Set text alignment to left */
 caption, th {
   text-align: left;
 }
@@ -106,7 +106,7 @@ q:before, q:after {
   content: '';
 }
 
-/* 统一上标和下标 */
+/* Unify sub and sup */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -125,7 +125,7 @@ sub {
   bottom: -0.25em;
 }
 
-/* 让链接在 hover 状态下显示下划线 */
+/* Should underscore when hover the hyperlink */
 a {
  // color: #1abc9c;
 
@@ -163,7 +163,6 @@ u, .typo-u {
   text-decoration: underline;
 }
 
-/* 标记，类似于手写的荧光笔的作用 */
 mark {
   background: #fffdd1;
   border-bottom: 1px solid #ffedce;
@@ -171,21 +170,7 @@ mark {
   margin: 0 5px;
 }
 
-/* 代码片断 */
-/*
-pre, code, pre tt {
-  font-family: Courier, 'Courier New', monospace;
-}
-
-pre {
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: 1em 1.5em;
-  display: block;
-  -webkit-overflow-scrolling: touch;
-}*/
-
-/* 一致化 horizontal rule */
+/* Unify horizontal rule */
 hr {
   border: none;
   border-bottom: 1px solid #cfcfcf;
@@ -193,9 +178,8 @@ hr {
   height: 10px;
 }
 
-/* 底部印刷体、版本等标记 */
 small, .typo-small,
-  /* 图片说明 */
+  /* Picture instruction */
 figcaption {
   font-size: 0.9em;
   color: #888;
@@ -206,7 +190,7 @@ strong, b {
   color: #000;
 }
 
-/* 可拖动文件添加拖动手势 */
+/* cursor changed when drag the file */
 [draggable] {
   cursor: move;
 }
@@ -224,7 +208,7 @@ strong, b {
   zoom: 1;
 }
 
-/* 强制文本换行 */
+/* Force word wrap */
 .textwrap, .textwrap td, .textwrap th {
   word-wrap: break-word;
   word-break: break-all;
@@ -234,12 +218,12 @@ strong, b {
   table-layout: fixed;
 }
 
-/* 提供 serif 版本的字体设置: iOS 下中文自动 fallback 到 sans-serif */
+/* Provide font settings of serif : Chinese will automatically fallback to sans-serif in iOS */
 .serif {
   font-family: Palatino, Optima, Georgia, serif;
 }
 
-/* 保证块/段落之间的空白隔行 */
+/* Set blank line between each paragraphs or blocks */
 .typo p, .typo pre, .typo ul, .typo ol, .typo dl, .typo form, .typo hr, .typo table,
 .typo-p, .typo-pre, .typo-ul, .typo-ol, .typo-dl, .typo-form, .typo-hr, .typo-table, blockquote {
   margin-bottom: 1.2em
@@ -252,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.35;
 }
 
-/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+/* Title should more close to the content，and it should be different than other parts，margin should be optimized */
 .typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6,
 .typo-h1, .typo-h2, .typo-h3, .typo-h4, .typo-h5, .typo-h6 {
   margin-top: 1.2em;
@@ -280,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
   //font-size: 1.2em;
 }
 
-/* 在文章中，应该还原 ul 和 ol 的样式 */
+/* Reset the styles of ul and ol in posts */
 .typo ul, .typo-ul {
   margin-left: 1.3em;
   list-style: disc;
@@ -300,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style: circle;
 }
 
-/* 同 ul/ol，在文章中应用 table 基本格式 */
+/* Same as ul/ol，apply basic styles of table in posts */
 .typo table th, .typo table td, .typo-table th, .typo-table td, .typo table caption {
   border: 1px solid #ddd;
   padding: 0.5em 1em;
@@ -319,7 +303,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: none;
 }
 
-/* 去除 webkit 中 input 和 textarea 的默认样式  */
+/* Remove default styles of input and textarea in webkit */
 .typo-input, .typo-textarea {
   -webkit-appearance: none;
   border-radius: 0;

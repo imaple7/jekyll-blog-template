@@ -11,7 +11,7 @@ layout: page
 
 <h2> mail</h2> 
 
-> qian_jizy(at)163{dot}com
+> imaple7(at)gmail{dot}com
 
 
 
